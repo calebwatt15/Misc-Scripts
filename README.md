@@ -1,6 +1,7 @@
 # Misc-Scripts
 
-==bypass.html==
+bypass.html
+===========
 load in IE11
 Press "Allow" on the script warning
 Press F12 and open the Network tab
